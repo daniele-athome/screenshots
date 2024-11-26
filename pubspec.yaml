@@ -13,7 +13,7 @@ dependencies:
   yaml: ^3.1.1
   resource_portable: ^3.0.1
   path: ^1.8.2
-  file: ^6.1.4
+  file: ^7.0.0
   archive: ^3.3.2
   platform: ^3.1.0
   process: ^5.0.2
