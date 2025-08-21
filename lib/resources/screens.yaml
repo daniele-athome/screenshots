@@ -137,8 +137,8 @@ android:
     resize: 80%
     resources:
       statusbar: resources/android/1080/statusbar_black.png
-      statusbar black: resources/android/1080/statusbar_black.png
-      statusbar white: resources/android/1080/statusbar_black.png
+      statusbar black: resources/android/1080/statusbar.png
+      statusbar white: resources/android/1080/statusbar.png
       navbar: resources/android/1080/navbar.png
       frame: resources/android/phones/Nexus_5X.png
     offset: -4-9
