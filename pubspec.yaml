@@ -39,6 +39,7 @@ dev_dependencies:
   collection: any
   integration_test:
     sdk: flutter
+  watcher: ^1.1.2
 
 dependency_overrides:
 #  fake_process_manager:
