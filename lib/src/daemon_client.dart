@@ -369,11 +369,10 @@ DaemonDevice loadDaemonDevice(Map<String, dynamic> device) {
       device['id'],
       device['name'],
       device['category'],
-      device['platformType'],
-      device['platform'],
-      true,
+      device['platformType'] == 'android' ? DeviceType.android : DeviceType.ios,
+      device['emulator'],
       device['ephemeral'],
-      // 'NEXUS_6P_API_28',
+      device['emulatorId'] ?? 'macos', // macos has empty emulatorId
       iosModel: device['model'],
     );
   }
