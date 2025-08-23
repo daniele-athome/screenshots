@@ -1,7 +1,7 @@
 import '../../src/globals.dart';
 import '../../src/resources.dart';
 
-import 'android/1080/navbar-pixel5-gesture.png.dart' as i21;
+import 'android/1080/navbar-pixel5.png.dart' as i21;
 import 'android/1080/navbar.png.dart' as i15;
 import 'android/1080/statusbar-pixel5.png.dart' as i20;
 import 'android/1080/statusbar.png.dart' as i14;
