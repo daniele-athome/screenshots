@@ -146,8 +146,8 @@ android:
       statusbar: screens/android/1080/statusbar-pixel5.png
       statusbar black: screens/android/1080/statusbar-pixel5.png
       statusbar white: screens/android/1080/statusbar-pixel5.png
-      # navbar: screens/android/1080/navbar-pixel5.png
-      navbar: screens/android/1080/navbar-pixel5-gesture.png
+      navbar: screens/android/1080/navbar-pixel5.png
+      #navbar: screens/android/1080/navbar-pixel5-gesture.png
       frame: screens/android/phones/Google Pixel 5 Just Black.png
     offset: -3+8
     destName: phone
