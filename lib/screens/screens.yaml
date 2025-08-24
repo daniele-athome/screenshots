@@ -153,6 +153,21 @@ android:
     destName: phone
     devices:
       - Pixel 5
+  7inch:
+    size: 1200x1920
+    resize: 80%
+    resources:
+      statusbar: screens/android/1200/statusbar_white.png
+      statusbar black: screens/android/1200/statusbar_white.png
+      statusbar white: screens/android/1200/statusbar_black.png
+      navbar: screens/android/1200/navbar_black.png
+      navbar white: screens/android/1200/navbar_white.png
+      navbar black: screens/android/1200/navbar_black.png
+      frame: screens/android/tablets/Nexus 9.png
+    offset: +0+0
+    destName: sevenInch
+    devices:
+      - Nexus 7
   8.9inch:
     size: 1536x2048
     resize: 80%
