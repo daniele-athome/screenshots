@@ -188,9 +188,20 @@ class ImageProcessor {
   /// Append android navigation bar to screenshot.
   static Future<void> append(
       String tmpDir, ScreenImagePaths paths, String screenshotPath) async {
+
+    File navbarPath;
+    // opposite choice of the status bar
+    if (im.isThresholdExceeded(screenshotPath, _kCrop)) {
+      // use white status bar
+      navbarPath = paths.navbarWhite ?? paths.navbar!;
+    } else {
+      // use black status bar
+      navbarPath = paths.navbarBlack ?? paths.navbar!;
+    }
+
     final options = {
       'screenshotPath': screenshotPath,
-      'screenshotNavbarPath': paths.navbar?.path,
+      'screenshotNavbarPath': navbarPath.path,
     };
     await im.convert('appendNavbar', options);
   }

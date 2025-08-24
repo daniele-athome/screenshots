@@ -28,6 +28,8 @@ class ScreenInfo {
   final EmbeddedResource? statusbarWhite;
   final EmbeddedResource? frame;
   final EmbeddedResource? navbar;
+  final EmbeddedResource? navbarBlack;
+  final EmbeddedResource? navbarWhite;
 
   const ScreenInfo(
     this.deviceType,
@@ -42,6 +44,8 @@ class ScreenInfo {
     this.statusbarWhite,
     this.frame,
     this.navbar,
+    this.navbarBlack,
+    this.navbarWhite,
   });
 }
 
@@ -51,6 +55,8 @@ class ScreenImagePaths {
   final File? statusbarWhite;
   final File? frame;
   final File? navbar;
+  final File? navbarBlack;
+  final File? navbarWhite;
 
   ScreenImagePaths(
     this.statusbar,
@@ -58,6 +64,8 @@ class ScreenImagePaths {
     this.statusbarWhite,
     this.frame,
     this.navbar,
+    this.navbarBlack,
+    this.navbarWhite,
   );
 }
 
@@ -97,6 +105,14 @@ Future<ScreenImagePaths> unpackImages(ScreenInfo screen, String dstDir) async =>
       screen.navbar == null
           ? null
           : await writeImage(screen.navbar!, '$dstDir/navbar.png'),
+      screen.navbarBlack == null
+          ? null
+          : await writeImage(
+          screen.navbarBlack!, '$dstDir/navbarBlack.png'),
+      screen.navbarWhite == null
+          ? null
+          : await writeImage(
+          screen.navbarWhite!, '$dstDir/navbarWhite.png'),
     );
 
 /// Read scripts from resources and install in staging area.
