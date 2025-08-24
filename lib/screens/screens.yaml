@@ -166,6 +166,21 @@ android:
     destName: tenInch
     devices:
       - Nexus 9
+  10inch:
+    size: 2560x1600
+    resize: 80%
+    resources:
+      statusbar: screens/android/2560/statusbar_white.png
+      statusbar black: screens/android/2560/statusbar_white.png
+      statusbar white: screens/android/2560/statusbar_black.png
+      navbar: screens/android/2560/navbar_black.png
+      navbar white: screens/android/2560/navbar_white.png
+      navbar black: screens/android/2560/navbar_black.png
+      frame: screens/android/tablets/Nexus 9.png
+    offset: +0+0
+    destName: tenInch
+    devices:
+      - Pixel Tablet
   # placeholder for android device type (phone/tenInch/sevenInch)
   # used when framing is off to generate fastlane path
   # (avoids warning about using 'phone' as default)
