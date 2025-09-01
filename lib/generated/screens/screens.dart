@@ -43,6 +43,7 @@ const List<ScreenInfo> screens = [
     "75%",
     "-0-0",
     null,
+    false,
     [
       'iPhone 6 Plus',
       'iPhone 6S Plus',
@@ -62,6 +63,7 @@ const List<ScreenInfo> screens = [
     "87%",
     "-0-0",
     null,
+    false,
     [
       'iPhone X',
       'iPhone XS',
@@ -79,6 +81,7 @@ const List<ScreenInfo> screens = [
     "87%",
     "-0-2",
     null,
+    false,
     [
       'iPhone XR',
       'iPhone Xr',
@@ -102,6 +105,7 @@ const List<ScreenInfo> screens = [
     "86%",
     "-0-0",
     null,
+    false,
     [
       'iPad Pro (12.9-inch) (1st generation)',
       'iPad Pro (12.9-inch) (2nd generation)',
@@ -118,6 +122,7 @@ const List<ScreenInfo> screens = [
     "91.25%",
     "-3+2",
     null,
+    false,
     [
       'iPad Pro (12.9-inch) (3rd generation)',
       'iPad Pro (12.9-inch) (4th generation)',
@@ -134,6 +139,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "-4-9",
     "phone",
+    false,
     [
       'Nexus 5X',
     ],
@@ -150,6 +156,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "-3+8",
     "phone",
+    false,
     [
       'Nexus 6P',
       'Pixel 4',
@@ -167,6 +174,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "-3+8",
     "phone",
+    true,
     [
       'Pixel 5',
     ],
@@ -183,6 +191,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "+0+0",
     "sevenInch",
+    false,
     [
       'Nexus 7',
     ],
@@ -201,6 +210,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "+0+0",
     "tenInch",
+    false,
     [
       'Nexus 9',
     ],
@@ -217,6 +227,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "+0+0",
     "tenInch",
+    false,
     [
       'Pixel Tablet',
     ],
@@ -235,6 +246,7 @@ const List<ScreenInfo> screens = [
     null,
     null,
     "phone",
+    false,
     [
       'default phone',
       'Nexus 6',
@@ -247,6 +259,7 @@ const List<ScreenInfo> screens = [
     null,
     null,
     "sevenInch",
+    false,
     [
       'default seven inch',
     ],
@@ -258,6 +271,7 @@ const List<ScreenInfo> screens = [
     null,
     null,
     "tenInch",
+    false,
     [
       'default ten inch',
     ],

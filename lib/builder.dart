@@ -65,6 +65,11 @@ Future<String> generateScreens(File file) async {
           return s != null ? '"$s"' : 'null';
         }
 
+        bool boolean(Map<String, dynamic> map, String key, bool defaultValue) {
+          final s = map[key];
+          return s ?? defaultValue;
+        }
+
         buf.writeln("  ScreenInfo(");
         buf.writeln("    DeviceType.$name,");
         buf.writeln("    '$key',");
@@ -73,6 +78,7 @@ Future<String> generateScreens(File file) async {
           buf.writeln("    ${str(values2, 'resize')},");
           buf.writeln("    ${str(values2, 'offset')},");
           buf.writeln("    ${str(values2, 'destName')},");
+          buf.writeln("    ${boolean(values2, 'append navbar', false)},");
           var devices = values2['devices'];
           if (devices is List) {
             buf.writeln("    [");

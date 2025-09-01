@@ -30,6 +30,7 @@ class ScreenInfo {
   final EmbeddedResource? navbar;
   final EmbeddedResource? navbarBlack;
   final EmbeddedResource? navbarWhite;
+  final bool appendNavbar;
 
   const ScreenInfo(
     this.deviceType,
@@ -38,6 +39,7 @@ class ScreenInfo {
     this.resize,
     this.offset,
     this.destName,
+    this.appendNavbar,
     this.devices, {
     this.statusbar,
     this.statusbarBlack,

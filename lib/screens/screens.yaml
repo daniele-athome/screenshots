@@ -150,6 +150,8 @@ android:
       #navbar: screens/android/1080/navbar-pixel5-gesture.png
       frame: screens/android/phones/Google Pixel 5 Just Black.png
     offset: -3+8
+    # Pixel 5 on API level 31 needs the navbar to be appended instead of overlaid
+    append navbar: true
     destName: phone
     devices:
       - Pixel 5

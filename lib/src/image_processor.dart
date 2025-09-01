@@ -68,7 +68,7 @@ class ImageProcessor {
 
           if (device.deviceType == DeviceType.android) {
             // add nav bar for each screenshot
-            await append(_config.stagingDir, paths, screenshotPath.path);
+            await append(_config.stagingDir, paths, screenshotPath.path, !screenProps.appendNavbar);
           }
 
           // TODO: don't add frame, let frameit handle this. Atleast add config option to deactivate
@@ -186,8 +186,9 @@ class ImageProcessor {
   }
 
   /// Append android navigation bar to screenshot.
+  /// Pass true to [[overlay]] to overlay the navbar onto the screenshot, false to append it.
   static Future<void> append(
-      String tmpDir, ScreenImagePaths paths, String screenshotPath) async {
+      String tmpDir, ScreenImagePaths paths, String screenshotPath, bool overlay) async {
 
     File navbarPath;
     // opposite choice of the status bar
@@ -203,7 +204,7 @@ class ImageProcessor {
       'screenshotPath': screenshotPath,
       'screenshotNavbarPath': navbarPath.path,
     };
-    await im.convert('appendNavbar', options);
+    await im.convert(overlay ? 'appendNavbar' : 'append', options);
   }
 
   /// Frame a screenshot with image of device.
