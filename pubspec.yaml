@@ -23,11 +23,7 @@ dependencies:
   tool_mobile:
     git: 
       url: https://github.com/daniele-athome/tool_mobile.git
-      ref: 0d9b16d240c48653d00d375b4f7ad47820efac0a
-  tool_base:
-    git:
-      ref: 950396e2795f77640276dd2ed73b83316f825191
-      url: https://github.com/daniele-athome/tool_base.git
+      ref: 1135d7a0949f605c4e2f1a4ab4d678999cfd1a86
 
 dev_dependencies:
   build_runner: ^2.1.4
