@@ -22,11 +22,11 @@ dependencies:
   build: ^2.1.1
   tool_mobile:
     git: 
-      url: https://github.com/daniele-athome/tool_mobile
-      ref: ng
+      url: https://github.com/daniele-athome/tool_mobile.git
+      ref: 0d9b16d240c48653d00d375b4f7ad47820efac0a
   tool_base:
     git:
-      ref: ng
+      ref: 950396e2795f77640276dd2ed73b83316f825191
       url: https://github.com/daniele-athome/tool_base.git
 
 dev_dependencies:
