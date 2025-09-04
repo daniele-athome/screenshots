@@ -52,6 +52,9 @@ ios:
       statusbar: screens/ios/6.5inch/statusbar_white.png
       statusbar black: screens/ios/6.5inch/statusbar_black.png
       statusbar white: screens/ios/6.5inch/statusbar_white.png
+      navbar: screens/ios/6.5inch/navbar_white.png
+      navbar black: screens/ios/6.5inch/navbar_black.png
+      navbar white: screens/ios/6.5inch/navbar_white.png
       frame: screens/ios/phones/Apple iPhone XS Max Silver.png
     offset: -0-2
     devices:
