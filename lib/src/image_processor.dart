@@ -66,10 +66,11 @@ class ImageProcessor {
           // add status bar for each screenshot
           await overlay(_config.stagingDir, paths, screenshotPath.path);
 
-          if (device.deviceType == DeviceType.android) {
+          // TEST on any device type
+          //if (device.deviceType == DeviceType.android) {
             // add nav bar for each screenshot
             await append(_config.stagingDir, paths, screenshotPath.path, !screenProps.appendNavbar);
-          }
+          //}
 
           // TODO: don't add frame, let frameit handle this. Atleast add config option to deactivate
           // await frame(_config.stagingDir, screenProps, paths,
