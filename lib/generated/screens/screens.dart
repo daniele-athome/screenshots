@@ -140,6 +140,21 @@ const List<ScreenInfo> screens = [
     frame: i15.r,
   ),
   ScreenInfo(
+    DeviceType.ios,
+    '13inch',
+    "2752x2064",
+    null,
+    null,
+    null,
+    false,
+    [
+      'iPad Pro 13-inch (M4)',
+    ],
+    statusbar: i12.r,
+    statusbarBlack: i13.r,
+    statusbarWhite: i12.r,
+  ),
+  ScreenInfo(
     DeviceType.android,
     '5.2inch',
     "1080x1920",

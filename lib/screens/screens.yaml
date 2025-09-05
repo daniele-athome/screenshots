@@ -114,6 +114,14 @@ ios:
     devices:
       - iPad Pro (12.9-inch) (3rd generation)
       - iPad Pro (12.9-inch) (4th generation)
+  13inch:
+    size: 2752x2064
+    resources:
+      statusbar: screens/ios/2048/statusbar_white.png
+      statusbar black: screens/ios/2048/statusbar_black.png
+      statusbar white: screens/ios/2048/statusbar_white.png
+    devices:
+      - iPad Pro 13-inch (M4)
 android:
   5.2inch:
     size: 1080x1920
