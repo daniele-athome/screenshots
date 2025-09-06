@@ -191,21 +191,23 @@ class ImageProcessor {
   static Future<void> append(
       String tmpDir, ScreenImagePaths paths, String screenshotPath, bool overlay) async {
 
-    File navbarPath;
+    File? navbarPath;
     // opposite choice of the status bar
     if (im.isThresholdExceeded(screenshotPath, _kCrop)) {
       // use white status bar
-      navbarPath = paths.navbarWhite ?? paths.navbar!;
+      navbarPath = paths.navbarWhite ?? paths.navbar;
     } else {
       // use black status bar
-      navbarPath = paths.navbarBlack ?? paths.navbar!;
+      navbarPath = paths.navbarBlack ?? paths.navbar;
     }
 
-    final options = {
-      'screenshotPath': screenshotPath,
-      'screenshotNavbarPath': navbarPath.path,
-    };
-    await im.convert(overlay ? 'appendNavbar' : 'append', options);
+    if (navbarPath != null) {
+      final options = {
+        'screenshotPath': screenshotPath,
+        'screenshotNavbarPath': navbarPath.path,
+      };
+      await im.convert(overlay ? 'appendNavbar' : 'append', options);
+    }
   }
 
   /// Frame a screenshot with image of device.
