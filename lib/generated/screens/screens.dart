@@ -1,30 +1,32 @@
 import '../../src/globals.dart';
 import '../../src/resources.dart';
 
-import 'android/1080/navbar-pixel5.png.dart' as i23;
-import 'android/1080/navbar.png.dart' as i17;
-import 'android/1080/statusbar-pixel5.png.dart' as i22;
-import 'android/1080/statusbar.png.dart' as i16;
-import 'android/1200/navbar_black.png.dart' as i27;
-import 'android/1200/navbar_white.png.dart' as i28;
-import 'android/1200/statusbar_black.png.dart' as i26;
-import 'android/1200/statusbar_white.png.dart' as i25;
-import 'android/1440/navbar_black.png.dart' as i20;
-import 'android/1440/statusbar.png.dart' as i19;
-import 'android/1536/navigationbar.png.dart' as i31;
-import 'android/1536/statusbar.png.dart' as i30;
-import 'android/2560/navbar_black.png.dart' as i34;
-import 'android/2560/navbar_white.png.dart' as i35;
-import 'android/2560/statusbar_black.png.dart' as i33;
-import 'android/2560/statusbar_white.png.dart' as i32;
-import 'android/phones/Google Pixel 5 Just Black.png.dart' as i24;
-import 'android/phones/Nexus 6P.png.dart' as i21;
-import 'android/phones/Nexus_5X.png.dart' as i18;
-import 'android/tablets/Nexus 9.png.dart' as i29;
+import 'android/1080/navbar-pixel5.png.dart' as i25;
+import 'android/1080/navbar.png.dart' as i19;
+import 'android/1080/statusbar-pixel5.png.dart' as i24;
+import 'android/1080/statusbar.png.dart' as i18;
+import 'android/1200/navbar_black.png.dart' as i29;
+import 'android/1200/navbar_white.png.dart' as i30;
+import 'android/1200/statusbar_black.png.dart' as i28;
+import 'android/1200/statusbar_white.png.dart' as i27;
+import 'android/1440/navbar_black.png.dart' as i22;
+import 'android/1440/statusbar.png.dart' as i21;
+import 'android/1536/navigationbar.png.dart' as i33;
+import 'android/1536/statusbar.png.dart' as i32;
+import 'android/2560/navbar_black.png.dart' as i36;
+import 'android/2560/navbar_white.png.dart' as i37;
+import 'android/2560/statusbar_black.png.dart' as i35;
+import 'android/2560/statusbar_white.png.dart' as i34;
+import 'android/phones/Google Pixel 5 Just Black.png.dart' as i26;
+import 'android/phones/Nexus 6P.png.dart' as i23;
+import 'android/phones/Nexus_5X.png.dart' as i20;
+import 'android/tablets/Nexus 9.png.dart' as i31;
 import 'ios/1125/statusbar_black.png.dart' as i5;
 import 'ios/1125/statusbar_white.png.dart' as i4;
 import 'ios/1242/statusbar_black.png.dart' as i1;
 import 'ios/1242/statusbar_white.png.dart' as i2;
+import 'ios/2048/navbar_black.png.dart' as i17;
+import 'ios/2048/navbar_white.png.dart' as i16;
 import 'ios/2048/statusbar_black.png.dart' as i13;
 import 'ios/2048/statusbar_white.png.dart' as i12;
 import 'ios/6.5inch/navbar_black.png.dart' as i10;
@@ -153,6 +155,9 @@ const List<ScreenInfo> screens = [
     statusbar: i12.r,
     statusbarBlack: i13.r,
     statusbarWhite: i12.r,
+    navbar: i16.r,
+    navbarBlack: i17.r,
+    navbarWhite: i16.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -165,11 +170,11 @@ const List<ScreenInfo> screens = [
     [
       'Nexus 5X',
     ],
-    statusbar: i16.r,
-    statusbarBlack: i16.r,
-    statusbarWhite: i16.r,
-    navbar: i17.r,
-    frame: i18.r,
+    statusbar: i18.r,
+    statusbarBlack: i18.r,
+    statusbarWhite: i18.r,
+    navbar: i19.r,
+    frame: i20.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -183,11 +188,11 @@ const List<ScreenInfo> screens = [
       'Nexus 6P',
       'Pixel 4',
     ],
-    statusbar: i19.r,
-    statusbarBlack: i19.r,
-    statusbarWhite: i19.r,
-    navbar: i20.r,
-    frame: i21.r,
+    statusbar: i21.r,
+    statusbarBlack: i21.r,
+    statusbarWhite: i21.r,
+    navbar: i22.r,
+    frame: i23.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -200,11 +205,11 @@ const List<ScreenInfo> screens = [
     [
       'Pixel 5',
     ],
-    statusbar: i22.r,
-    statusbarBlack: i22.r,
-    statusbarWhite: i22.r,
-    navbar: i23.r,
-    frame: i24.r,
+    statusbar: i24.r,
+    statusbarBlack: i24.r,
+    statusbarWhite: i24.r,
+    navbar: i25.r,
+    frame: i26.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -217,13 +222,13 @@ const List<ScreenInfo> screens = [
     [
       'Nexus 7',
     ],
-    statusbar: i25.r,
-    statusbarBlack: i25.r,
-    statusbarWhite: i26.r,
-    navbar: i27.r,
-    navbarWhite: i28.r,
-    navbarBlack: i27.r,
-    frame: i29.r,
+    statusbar: i27.r,
+    statusbarBlack: i27.r,
+    statusbarWhite: i28.r,
+    navbar: i29.r,
+    navbarWhite: i30.r,
+    navbarBlack: i29.r,
+    frame: i31.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -236,11 +241,11 @@ const List<ScreenInfo> screens = [
     [
       'Nexus 9',
     ],
-    statusbar: i30.r,
-    statusbarBlack: i30.r,
-    statusbarWhite: i30.r,
-    navbar: i31.r,
-    frame: i29.r,
+    statusbar: i32.r,
+    statusbarBlack: i32.r,
+    statusbarWhite: i32.r,
+    navbar: i33.r,
+    frame: i31.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -253,13 +258,13 @@ const List<ScreenInfo> screens = [
     [
       'Pixel Tablet',
     ],
-    statusbar: i32.r,
-    statusbarBlack: i32.r,
-    statusbarWhite: i33.r,
-    navbar: i34.r,
-    navbarWhite: i35.r,
-    navbarBlack: i34.r,
-    frame: i29.r,
+    statusbar: i34.r,
+    statusbarBlack: i34.r,
+    statusbarWhite: i35.r,
+    navbar: i36.r,
+    navbarWhite: i37.r,
+    navbarBlack: i36.r,
+    frame: i31.r,
   ),
   ScreenInfo(
     DeviceType.android,
