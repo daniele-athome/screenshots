@@ -22,6 +22,7 @@ import 'package:screenshots/src/image_magick.dart' as _i2;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
+// ignore_for_file: invalid_use_of_internal_member
 
 /// A class which mocks [ImageMagick].
 ///
@@ -37,15 +38,10 @@ class MockImageMagick extends _i1.Mock implements _i2.ImageMagick {
     Map<dynamic, dynamic>? options,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #convert,
-          [
-            command,
-            options,
-          ],
-        ),
-        returnValue: _i3.Future<dynamic>.value(),
-      ) as _i3.Future<dynamic>);
+            Invocation.method(#convert, [command, options]),
+            returnValue: _i3.Future<dynamic>.value(),
+          )
+          as _i3.Future<dynamic>);
 
   @override
   bool isThresholdExceeded(
@@ -54,54 +50,37 @@ class MockImageMagick extends _i1.Mock implements _i2.ImageMagick {
     double? threshold = 0.76,
   ]) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #isThresholdExceeded,
-          [
-            imagePath,
-            cropSizeOffset,
-            threshold,
-          ],
-        ),
-        returnValue: false,
-      ) as bool);
+            Invocation.method(#isThresholdExceeded, [
+              imagePath,
+              cropSizeOffset,
+              threshold,
+            ]),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool compare(
-    String? comparisonImage,
-    String? recordedImage,
-  ) =>
+  bool compare(String? comparisonImage, String? recordedImage) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #compare,
-          [
-            comparisonImage,
-            recordedImage,
-          ],
-        ),
-        returnValue: false,
-      ) as bool);
+            Invocation.method(#compare, [comparisonImage, recordedImage]),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  String getDiffImagePath(String? imagePath) => (super.noSuchMethod(
-        Invocation.method(
-          #getDiffImagePath,
-          [imagePath],
-        ),
-        returnValue: _i4.dummyValue<String>(
-          this,
-          Invocation.method(
-            #getDiffImagePath,
-            [imagePath],
-          ),
-        ),
-      ) as String);
+  String getDiffImagePath(String? imagePath) =>
+      (super.noSuchMethod(
+            Invocation.method(#getDiffImagePath, [imagePath]),
+            returnValue: _i4.dummyValue<String>(
+              this,
+              Invocation.method(#getDiffImagePath, [imagePath]),
+            ),
+          )
+          as String);
 
   @override
   void deleteDiffs(String? dirPath) => super.noSuchMethod(
-        Invocation.method(
-          #deleteDiffs,
-          [dirPath],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#deleteDiffs, [dirPath]),
+    returnValueForMissingStub: null,
+  );
 }
