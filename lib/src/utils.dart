@@ -182,6 +182,8 @@ String? getAndroidDeviceLocale(String deviceId) {
   return locale.isNotEmpty ? locale : null;
 }
 
+const kDefaultIosLocale = 'en_US';
+
 /// Returns locale of simulator with udid [udId].
 String getIosSimulatorLocale(String udId) {
   final env = platform.environment;
@@ -255,16 +257,35 @@ String getIosSimulatorLocale(String udId) {
     globalPreferences.writeAsStringSync(contents);
     cmd(['plutil', '-convert', 'binary1', globalPreferences.path]);
   }
-  final localeInfo = jsonDecode(
-      cmd(['plutil', '-convert', 'json', '-o', '-', globalPreferencesPath]));
-  var locale = localeInfo['AppleLocale'];
+  var locale = _plistString(globalPreferencesPath, 'AppleLocale');
+  // if AppleLocale missing (not yet customized), try .GlobalDefaults
+  locale ??= _plistString(globalDefaultsPath, 'AppleLocale');
   if (locale == null) {
-    // if AppleLocale null (not yet customized), try .GlobalDefaults
-    final defaultsLocaleInfo = jsonDecode(
-        cmd(['plutil', '-convert', 'json', '-o', '-', globalDefaultsPath]));
-    locale = defaultsLocaleInfo['AppleLocale'];
+    // A simulator whose locale was never customized records none: the
+    // preferences plist is only written on first boot and erasing the device
+    // removes it again. That simulator is in Apple's default locale.
+    printStatus(
+        'Warning: no locale recorded for simulator $udId, assuming $kDefaultIosLocale.');
+    return kDefaultIosLocale;
   }
   return locale;
+}
+
+/// Returns the string stored at [key] in the plist at [plistPath],
+/// or null if the file, the key or the value is missing.
+String? _plistString(String plistPath, String key) {
+  final args = ['plutil', '-extract', key, 'raw', '-o', '-', plistPath];
+  _traceCommand(args);
+  final result = processManager.runSync(args, runInShell: true);
+  if (result.exitCode != 0) {
+    // Reported rather than traced: the reason separates a key that is simply
+    // absent from a plutil that rejected the command.
+    printStatus(
+        'Warning: cannot read \'$key\' from $plistPath: ${result.stderr.toString().trim()}');
+    return null;
+  }
+  final value = (result.stdout as String).trim();
+  return value.isEmpty ? null : value;
 }
 
 ///// Get android emulator id from a running emulator with id [deviceId].
