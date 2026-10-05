@@ -69,6 +69,17 @@ ios:
       - iPhone 14 Plus
       - iPhone 16 Pro
       - iPhone 16 Pro Max
+  6.9inch:
+    size: 1320x2868
+    resources:
+      statusbar: screens/ios/6.9inch/statusbar_white.png
+      statusbar black: screens/ios/6.9inch/statusbar_black.png
+      statusbar white: screens/ios/6.9inch/statusbar_white.png
+      navbar: screens/ios/6.9inch/navbar_white.png
+      navbar black: screens/ios/6.9inch/navbar_black.png
+      navbar white: screens/ios/6.9inch/navbar_white.png
+    devices:
+      - iPhone 17 Pro Max
   #  7.9inches:
   #    devices:
   #      - iPad Mini
@@ -117,14 +128,15 @@ ios:
   13inch:
     size: 2752x2064
     resources:
-      statusbar: screens/ios/2048/statusbar_white.png
-      statusbar black: screens/ios/2048/statusbar_black.png
-      statusbar white: screens/ios/2048/statusbar_white.png
-      navbar: screens/ios/2048/navbar_white.png
-      navbar black: screens/ios/2048/navbar_black.png
-      navbar white: screens/ios/2048/navbar_white.png
+      statusbar: screens/ios/2064/statusbar_white.png
+      statusbar black: screens/ios/2064/statusbar_black.png
+      statusbar white: screens/ios/2064/statusbar_white.png
+      navbar: screens/ios/2064/navbar_white.png
+      navbar black: screens/ios/2064/navbar_black.png
+      navbar white: screens/ios/2064/navbar_white.png
     devices:
       - iPad Pro 13-inch (M4)
+      - iPad Pro 13-inch (M5)
 android:
   5.2inch:
     size: 1080x1920
